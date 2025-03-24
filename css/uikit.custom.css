@@ -1,0 +1,175 @@
+.en, .en p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.libre {
+	font-family: 'Libre Baskerville', serif;
+}
+
+.uk-logo {
+	width: 7rem;
+}
+
+.uk-navbar-nav>li>a {
+	padding: 0 20px;
+	margin: 10px 0;
+	height: 60px;
+	border-right: 1px solid #c4c4c4;
+	font-size: 1rem;
+}
+
+.uk-navbar-nav>li.uk-active>a {
+	border-bottom: 5px solid #ba9068;
+	box-sizing: content-box;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+	background: #edeee8;
+}
+
+.uk-offcanvas-bar .uk-nav>li.uk-active>a {
+	border-bottom: 5px solid #ba9068;
+}
+
+.uk-offcanvas-bar .uk-nav-sub>li.uk-active>a {
+	color: #fff;
+}
+
+.uk-navbar-nav .svg {
+	height: 20px;
+	padding-right: 10px;
+}
+
+.uk-offcanvas-bar .svg {
+	height: 20px;
+	margin-top: 80px;
+}
+
+.uk-modal-dialog {
+	width: initial;
+}
+
+#prevideo {
+	position: relative; 
+	width: 95vw; 
+	height: 80vh; 
+	margin: 0 auto;
+}
+
+#player {
+	width: 100vw;
+	height: 100vh;
+}
+
+.intro {
+	background: #000;
+}
+
+.intro h2 {
+	letter-spacing: 10px;
+}
+
+.intro hr {
+	margin: 30px 30%;	
+	border-top-color: rgba(255,255,255,.5);
+}
+
+.white {
+	color: #fff;
+}
+
+.brown {
+	color: #ba9068;
+}
+
+.background {
+	 background: rgba(0,0,0,0.5);
+}
+
+.bidportrait hr {
+    width: 50%;
+    height: 20px;
+	background-color: #ba9068;
+	margin: -10px auto;
+	border: 0;
+}
+
+.bidportrait .uk-position-center-right img {
+	width: 400px !important;
+}
+
+.bidportrait .uk-position-center-left img {
+	width: 280px !important;
+}
+
+.bidintro {
+	background-color: #414d56;
+}
+
+.bidintro hr {
+	border-color: #ba9068;
+	border-width: 2px;
+}
+
+.bidintro p {
+	color: #c5c5c5;
+}
+
+.bidintro a:hover {
+	color: #b2b2b2;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 640px) {
+	.uk-modal iframe {
+		width: 100%;
+	}
+}
+
+
+@media screen and (min-width: 960px) {
+	.bidintro {
+		margin-top: 50px;
+	}
+	.left .bidintro > div {
+		margin-left: 100px;
+	}
+	.right .bidintro > div {
+		margin-right: 100px;
+		padding-top: 200px;
+	}
+	
+	.bidinfo {
+		margin-bottom: 100px;
+	}
+	.left .bidportrait > div {
+		margin-right: -100px;
+	}
+	.right .bidportrait > div {
+		margin-left: -100px;
+	}
+	
+	.biddetails {
+		z-index: 1; 
+		padding-bottom: 50px;
+	}	
+	.left .biddetails {
+		padding-top: 550px;
+		padding-left: 50px;
+	}
+	.right .biddetails {
+		padding-top: 550px;
+		margin-left: 50px; 
+	}
+	.bidvideo {
+		z-index: 10;
+		max-width: 400px;
+		margin-left: -16vw;
+		margin-top: -240px;
+	}
+}
+
+::selection {
+	background: #fff;
+}

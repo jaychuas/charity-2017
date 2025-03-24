@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="canonical" href="">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<title>首页</title>
+	<meta name="description" content="">
+  
+	<meta property="og:url"                	content="" />
+	<meta property="og:type"               	content="" />
+	<meta property="og:title"              	content="" />
+	<meta property="og:site_name" 		 	content="" />	
+	<meta property="og:description"        	content="" />
+	<meta property="og:image"              	content="" />
+
+	<link rel="stylesheet" href="../css/uikit.min.css" />
+	<link rel="stylesheet" href="../css/uikit.custom.css" />
+	
+
+</head>
+
+	
+<body class="uk-background-cover" style="background-image: url(../images/texture.jpg);">
+
+	<nav class="uk-navbar-container uk-padding-small" uk-navbar>
+		<div class="uk-navbar-left">
+			<a href="#" class="uk-navbar-item uk-logo"><img src="../svg/logo.svg" /></a>
+		</div>
+		<div class="uk-navbar-right uk-visible@s">
+			<ul class="uk-navbar-nav">
+				<li class="uk-active"><a href="">首页</a></li>
+				<li><a href="intro.html">前言</a></li>
+				<li>
+  				   <a href="#">慈善拍卖品<span uk-icon="icon: triangle-down">
+  				   </a>
+  				   <div uk-dropdown>
+  					   <ul class="uk-nav uk-dropdown-nav">
+							<li><a href="bidding1.html">徐林之心</a></li>
+							<li><a href="bidding2.html">海纳之心</a></li>
+							<li><a href="bidding3.html">燃焰之心</a></li>
+							<li><a href="bidding4.html">力汇之心</a></li>
+  					   </ul>
+  				   </div>
+				</li>
+				<li>
+					<a class="uk-inline" type="button">
+						<img src="../svg/language.svg" class="svg" /><span>中文（简）</span><span uk-icon="icon: triangle-down"></span>
+
+					</a>
+					<div uk-dropdown>
+						<ul class="uk-nav uk-dropdown-nav">
+							<li><a href="../index.html">English</a></li>
+							<li class="uk-active"><a href="#">中文（简）</a></li>
+							<li><a href="../zh-hant/index.html">中文（繁）</a></li>
+							<li><a href="../id/index.html">Bahasa Indonesia</a></li>
+                            <li><a href="../th/index.html">ภาษาไทย</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		<a href="#mobilemenu" class="uk-navbar-right uk-hidden@s uk-icon-link" uk-icon="icon: menu; ratio: 2" uk-toggle></a>
+	</nav>
+	
+	<nav id="mobilemenu" uk-offcanvas="mode: push; flip: true; overlay: true;">
+       <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+           <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+			   <li class="uk-active"><a href="#">首页</a></li>
+               <li><a href="intro.html">前言</a></li>
+			   <li class="uk-parent"><a href="#">慈善拍卖品</a>
+			   		<ul class="uk-nav-sub">
+						<li><a href="bidding1.html">徐林之心</a></li>
+						<li><a href="bidding2.html">海纳之心</a></li>
+						<li><a href="bidding3.html">燃焰之心</a></li>
+						<li><a href="bidding4.html">力汇之心</a></li>
+			        </ul>
+				</li>
+			   
+               <li class="uk-parent">
+                   <img src="../svg/language.svg" class="svg" />
+                   <ul class="uk-nav-sub">
+							<li><a href="../index.html">English</a></li>
+							<li class="uk-active"><a href="#">中文（简）</a></li>
+							<li><a href="../zh-hant/index.html">中文（繁）</a></li>
+							<li><a href="../id/index.html">Bahasa Indonesia</a></li>
+                            <li><a href="../th/index.html">ภาษาไทย</a></li>
+                   </ul>
+               </li>
+               
+           </ul>
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+       </div>
+	</nav>
+	
+	<div class="uk-position-relative">
+		<div id="prevideo" class="uk-cover-container uk-background-cover" style="background-image:url('../images/index.jpg');" uk-height-viewport="offset-top: 115">
+		</div>
+		<div class="uk-position-center">
+			<a href="#modal-center" class="uk-icon-link" uk-icon="icon: play; ratio: 3" uk-toggle></a>
+		</div>
+	</div>
+	
+	<div id="modal-center" class="uk-modal-full" uk-modal>
+		<div class="uk-modal-dialog">
+			<button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+			<div class="uk-grid-collapse uk-flex-middle" uk-grid>
+				<div id="player"></div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../js/uikit.min.js"></script>
+	<script src="../js/uikit-icons.min.js"></script>
+	
+	<script>
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);	
+		
+		var player;
+		
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+				videoId: '9-W4dh2tNec',
+				playerVars: {
+					'autoplay': 0,
+					'controls': 0,
+					'loop': 0,
+					'modestbranding': 0,
+					'showinfo': 0,
+					'rel': 0
+				},
+	            //events: {
+	            //   'onReady': onPlayerReady,
+				//}
+
+			});
+		};
+		
+		//function onPlayerReady(event) {
+		//	event.target.playVideo();
+		//};
+		
+	    $('.uk-modal-close-full').click(function() {
+	  		if (player.getPlayerState() == 1) {
+	    			player.pauseVideo();
+	  		}
+		})
+		
+	</script>
+
+</body>
+</html>
